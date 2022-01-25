@@ -1,6 +1,3 @@
 export const Footer = () => {
-    return (
-        <>
-        </>
-    )
+    return <></>
 }
