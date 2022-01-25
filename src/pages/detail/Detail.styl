@@ -1,0 +1,158 @@
+.detailPage {
+    margin-top: 20px
+    display: flex
+    justify-content: center
+    gap: 20px
+
+    .article {
+        width: 720px
+        background-color: white
+        padding: 2.67em
+
+        .title {
+            font-size: 2.67rem
+            font-weight: 600
+            margin-top: 60px
+            margin-bottom: 20px
+        }
+
+        .authorBar {
+            margin-bottom: 40px
+            display: flex
+            justify-content: space-between
+            align-items: center
+
+            button {
+                color: #1e80ff
+                padding: 0 1rem
+                height: 34px
+                width: 70px
+                border: 1px solid rgba(30, 128, 255, 0.3)
+                background: rgba(30, 128, 255, 0.05)
+                border-radius: 4px
+                font-size: 14px
+            }
+
+            .authorInfo {
+                display: flex
+                cursor: pointer
+
+                .column {
+                    margin-left: 15px
+                    display: flex
+                    flex-direction: column
+                    justify-content: center
+                    gap: 5px
+
+                    .name {
+                        font-size: 1.333rem
+                        margin-right: 10px
+                        color: #515767
+                    }
+
+                    .statistics {
+                        font-size: 1.167rem
+                        color: #8a919f
+                    }
+                }
+            }
+        }
+
+        .cover {
+            width: 100%
+            max-height: 680px
+
+            img {
+                width: 100%
+                object-fit: contain
+            }
+        }
+
+        .commentArea {
+            .header {
+                margin-bottom: 50px
+
+                &>span {
+                    font-size: 18px
+                    font-weight: 600
+                    color: #252933
+                    display: flex
+                    align-items: center
+                    gap: 10px
+                }
+
+                .writeArea {
+                    display: flex
+                    gap: 20px
+                    margin-top: 40px
+                    margin-bottom: 40px
+                }
+            }
+        }
+
+        .loadBtn {
+            margin-top: 36px
+            display: none
+            background: #f7f8fa
+            font-size: 16px
+            font-weight: 500
+            height: 52px
+
+            &.show {
+                display: flex
+                justify-content: center
+                align-items: center
+                gap: 10px
+
+                svg {
+                    margin-top: 2px
+                }
+            }
+        }
+    }
+
+    .sideBar {
+        width: 280px
+        display: flex
+        flex-direction: column
+        gap: 20px
+
+        .authorCard {
+            padding: 1.7rem
+            background-color: white
+
+            .avatarRow {
+                display: flex
+                align-items: center
+                border-bottom: 1px solid #e4e6eb
+                padding-bottom: 15px
+                margin-bottom: 15px
+
+                span {
+                    font-size: 1.333rem
+                    font-weight: 500
+                    color: #252933
+                    margin-left: 10px
+                    margin-right: 5px
+                }
+            }
+
+            .statisticRow {
+                margin-top: 10px
+                display: flex
+                align-items: center
+
+                span {
+                    margin-left: 10px
+                    font-size: 1.167rem
+                    color: #252933
+                    font-weight: 400
+                }
+            }
+        }
+
+        .qrCode {
+            padding: 20px
+        }
+    }
+}

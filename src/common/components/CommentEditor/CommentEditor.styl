@@ -1,0 +1,76 @@
+.commentEditorBox {
+    width: 100%
+
+    .btnBar {
+        display: flex
+        justify-content: space-between
+        align-items: center
+        font-size: 14px
+
+        .editBtn {
+            color: #515767
+            fill: #515767
+            margin: 20px 0
+            display: flex
+            gap: 30px
+            user-select: none
+
+            &>div {
+                display: flex
+                align-items: center
+                gap: 5px
+                cursor: pointer
+
+                &:hover {
+                    color: #1e80ff
+                    fill: #1e80ff
+                }
+            }
+        }
+
+        .submitBtn {
+            background: #1e80ff
+            text-align: center
+            width: 92px
+            height: 36px
+            cursor: pointer
+            border: none
+            border-radius: 4px
+            color: #fff
+
+            &:hover {
+                background: #388eff
+                transition: all 0.1s
+            }
+
+            &:disabled {
+                background: #abcdff
+            }
+        }
+    }
+
+    .editor {
+        width: 100%
+        outline: none
+        background: #f2f3f5
+        border-radius: 4px
+        transition: all 0.3s
+        padding: 14px
+        color: #252933
+        min-height: 64px
+        font-size: 14px
+        font-weight: 400
+        box-sizing: border-box
+
+        &:empty::before {
+            content: attr(placeholder)
+            color: #8a919f
+            user-select: none
+        }
+
+        &:focus {
+            border: #1e80ff solid 1px
+            background: #fff
+        }
+    }
+}

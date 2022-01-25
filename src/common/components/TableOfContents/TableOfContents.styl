@@ -1,0 +1,85 @@
+.toc {
+    position: sticky
+    position: -webkit-sticky
+    top: 80px
+    background: white
+    padding: 20px
+    font-size: 15px
+    max-height: calc(60vh)
+    overflow: auto
+    color: #333
+
+    &::-webkit-scrollbar {
+        width: 0px
+    }
+
+    &::-webkit-scrollbar-track {
+        background: #f2f2f2
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: rgba(0, 0, 0, 0.05)
+        border-radius: 10px
+    }
+
+    &::-webkit-scrollbar-thumb:active {
+        background: rgba(0, 0, 0, 0.05)
+    }
+
+    .header {
+        display: flex
+        justify-content: center
+        border-bottom: 1px solid #e4e6eb
+        padding-bottom: 15px
+        font-size: 18px
+        font-weight: 500
+    }
+
+    &>ul {
+        padding-left: 0px !important
+    }
+
+    ul {
+        list-style-type: none
+        margin: 0
+        padding-left: 20px
+
+        li {
+            .active {
+                color: #007fff !important
+                position: relative
+
+                &::before {
+                    content: ''
+                    position: absolute
+                    top: 4px
+                    left: -10px
+                    margin-top: 7px
+                    width: 4px
+                    height: 16px
+                    background: #1e80ff
+                    border-radius: 0 4px 4px 0
+                }
+            }
+
+            a {
+                display: block
+                margin: 10px 0
+                font-size: 14px
+                padding: 10px
+                border-radius: 5px
+                cursor: pointer
+                text-decoration: none
+
+                &:hover {
+                    background: #F7F8FA
+                }
+
+                &:active, &:link, &:visited, &:active {
+                    text-decoration: none
+                    color: #333
+                }
+            }
+        }
+    }
+}
