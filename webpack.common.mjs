@@ -1,6 +1,9 @@
+import CircularDependencyPlugin from "circular-dependency-plugin";
 import HtmlWebpackPlugin from "html-webpack-plugin";
 import path from "path";
+
 export const common = {
+  target: 'web',
   entry: "./src/index.tsx",
   output: {
     filename: "bundle.js",
@@ -9,7 +12,6 @@ export const common = {
   },
   module: {
     rules: [
-
       {
         test: /\.ts$/,
         use: ["ts-loader"],
@@ -18,6 +20,7 @@ export const common = {
         test: /\.tsx$/i,
         use: ["ts-loader"]
       },
+
       {
         test: /\.css$/,
         use: ["style-loader", "css-loader"], //注意顺序
@@ -37,11 +40,15 @@ export const common = {
     ],
   },
   resolve: {
-    extensions: [".js", ".ts", ".tsx"],
+    extensions: ['.mjs', ".js", ".ts", ".tsx"],
   },
   plugins: [
     new HtmlWebpackPlugin({
       template: "./src/index.html",
     }),
+    new CircularDependencyPlugin({
+      exclude: /node_modules/,
+      failOnError: false
+    })
   ],
 };
